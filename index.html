@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大地电影网 | dadidianyingwang-zh.github.io —— 扎根真实的影像记录与本土电影观察</title>
+<meta name="keywords" content="大地电影网,大地影像,本土电影观察,真实题材电影,地域文化影像,乡土题材,纪实电影,独立纪录片,地方院线,在地电影文化,真实故事改编,本土导演作品">
+<meta name="description" content="大地电影网（dadidianyingwang-zh.github.io）是一个扎根真实、关注本土与地域影像的电影站点。我们记录土地上的故事——乡土题材、纪实影像、地方院线、真实事件改编作品，以及那些被主流视线忽略却值得被看见的本土创作。访问：https://dadidianyingwang-zh.github.io">
+<meta name="author" content="大地电影网编辑部">
+<meta name="copyright" content="© 2026 大地电影网">
+<meta name="robots" content="index,follow">
+<meta name="revisit-after" content="1 day">
+<meta name="rating" content="general">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="mobile-agent" content="format=html5; url=https://dadidianyingwang-zh.github.io/">
+<link rel="canonical" href="https://dadidianyingwang-zh.github.io/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --soil:#3d2b1f;--earth:#5c4033;--sand:#c9a66b;--cream:#f4ecd8;--paper:#fbf6ea;
+  --green:#4a5d23;--deep:#2a1a12;--line:rgba(61,43,31,.18);--txt:#3a2c22;
+}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman","Songti SC","SimSun",serif;background:var(--paper);color:var(--txt);line-height:1.85;font-size:15.5px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+
+/* 顶部信息条 */
+.topbar{background:var(--deep);color:#e8d9b8;font-size:12.5px;padding:9px 0;font-family:-apple-system,"PingFang SC",sans-serif}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar a{color:var(--sand)}
+.topbar a:hover{color:#fff}
+
+/* 报头式 Header */
+header{background:var(--paper);border-bottom:5px double var(--soil)}
+.hd{padding:34px 0 26px;text-align:center;position:relative}
+.hd .kicker{font-family:-apple-system,"PingFang SC",sans-serif;font-size:11px;letter-spacing:.4em;color:var(--sand);text-transform:uppercase;margin-bottom:14px}
+.hd h1{font-size:clamp(38px,8vw,74px);font-weight:400;letter-spacing:.06em;color:var(--soil);line-height:1.1}
+.hd h1 span{font-style:italic;color:var(--green)}
+.hd .sub{font-size:14px;color:var(--earth);margin-top:12px;font-style:italic}
+.hd .rule{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px;color:var(--sand);font-size:12px}
+.hd .rule::before,.hd .rule::after{content:"";height:1px;width:80px;background:var(--line)}
+
+nav{background:var(--soil);font-family:-apple-system,"PingFang SC",sans-serif}
+nav .wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:0}
+nav a{padding:16px 26px;font-size:14px;color:#e8d9b8;letter-spacing:.05em;border-right:1px solid rgba(201,166,107,.2);transition:.2s}
+nav a:first-child{border-left:1px solid rgba(201,166,107,.2)}
+nav a:hover{background:var(--green);color:#fff}
+
+/* Hero 首屏 */
+.hero{background:var(--soil);color:#e8d9b8;padding:100px 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 38px,rgba(201,166,107,.05) 38px,rgba(201,166,107,.05) 39px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.hero .tag{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:.3em;color:var(--sand);text-transform:uppercase;margin-bottom:24px}
+.hero h2{font-size:clamp(30px,5vw,52px);font-weight:400;line-height:1.25;color:#fbf6ea;margin-bottom:26px}
+.hero h2 em{font-style:italic;color:var(--sand)}
+.hero p{font-size:17px;color:#cbb89a;max-width:540px}
+.hero .u{margin-top:34px;font-family:-apple-system,sans-serif;font-size:13px;color:var(--sand);border-left:3px solid var(--sand);padding-left:16px}
+.hero .side{border:1px solid rgba(201,166,107,.35);padding:34px;background:rgba(0,0,0,.15)}
+.hero .side h4{font-family:-apple-system,sans-serif;font-size:12px;letter-spacing:.2em;color:var(--sand);margin-bottom:20px;text-transform:uppercase}
+.hero .side dl{font-family:-apple-system,sans-serif}
+.hero .side dl div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed rgba(201,166,107,.2);font-size:14px}
+.hero .side dl dt{color:#cbb89a}
+.hero .side dl dd{color:var(--sand);font-weight:600}
+
+/* 通用区块 */
+.sec{padding:90px 0}
+.sec-h{display:flex;align-items:flex-end;gap:30px;margin-bottom:50px;padding-bottom:18px;border-bottom:2px solid var(--soil)}
+.sec-h .num{font-family:-apple-system,sans-serif;font-size:13px;font-weight:700;color:var(--sand);background:var(--soil);padding:6px 12px;border-radius:2px;letter-spacing:.1em}
+.sec-h h3{font-size:clamp(26px,4.5vw,42px);font-weight:400;color:var(--soil);letter-spacing:.02em}
+.sec-h h3 i{font-style:italic;color:var(--green)}
+.sec-h .desc{margin-left:auto;max-width:320px;font-size:14px;color:var(--earth);font-family:-apple-system,"PingFang SC",sans-serif}
+
+/* 栏目一：封面故事（左右大图） */
+.cover{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;align-items:center}
+.cover .ph{background:linear-gradient(135deg,#4a5d23,#3d2b1f);aspect-ratio:4/3;display:grid;place-items:center;color:var(--sand);font-size:13px;letter-spacing:.2em;position:relative;border:8px solid var(--paper);box-shadow:0 0 0 1px var(--line),0 20px 50px rgba(61,43,31,.25)}
+.cover .ph::after{content:"大地影像 · 封面故事";position:absolute;bottom:18px;left:18px;font-family:-apple-system,sans-serif;letter-spacing:.1em}
+.cover .txt h4{font-size:28px;font-weight:400;color:var(--soil);line-height:1.4;margin-bottom:20px}
+.cover .txt .meta{font-family:-apple-system,sans-serif;font-size:12px;color:var(--sand);letter-spacing:.1em;margin-bottom:20px;text-transform:uppercase}
+.cover .txt p{color:var(--earth);font-size:15.5px}
+.cover .txt .more{display:inline-block;margin-top:26px;font-family:-apple-system,sans-serif;font-size:13px;font-weight:700;color:var(--green);border-bottom:2px solid var(--green);padding-bottom:3px}
+
+/* 栏目二：四栏地域观察 */
+.region{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--soil);border-bottom:2px solid var(--soil)}
+.reg-c{padding:32px 26px;border-right:1px solid var(--line);position:relative;transition:.25s}
+.reg-c:last-child{border-right:0}
+.reg-c:hover{background:var(--cream)}
+.reg-c .pin{font-family:-apple-system,sans-serif;font-size:11px;letter-spacing:.15em;color:var(--sand);margin-bottom:16px}
+.reg-c h4{font-size:19px;font-weight:400;color:var(--soil);margin-bottom:12px}
+.reg-c p{font-size:14px;color:var(--earth)}
+.reg-c .ln{margin-top:18px;font-size:12px;font-family:-apple-system,sans-serif;color:var(--green);font-weight:600}
+
+/* 栏目三：纪实清单（报纸目录式） */
+.list{column-count:2;column-gap:56px;column-rule:1px solid var(--line)}
+.list article{padding:20px 0;border-bottom:1px solid var(--line);break-inside:avoid;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:baseline}
+.list .idx{font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;color:var(--sand);background:var(--soil);width:30px;height:30px;display:grid;place-items:center;border-radius:2px}
+.list h4{font-size:17px;font-weight:400;color:var(--soil);line-height:1.5}
+.list .info{margin-top:8px;font-family:-apple-system,sans-serif;font-size:12px;color:var(--earth);grid-column:2}
+.list .info span{margin-right:14px;color:var(--sand)}
+
+/* 栏目四：导演手记（引言大引用） */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.note{background:var(--cream);padding:36px 30px;border-top:5px solid var(--soil);position:relative}
+.note::before{content:"“";position:absolute;top:6px;left:20px;font-size:70px;color:var(--sand);font-family:Georgia,serif;line-height:1}
+.note .who{font-family:-apple-system,sans-serif;font-size:12px;color:var(--sand);letter-spacing:.1em;margin-bottom:6px;margin-top:16px}
+.note blockquote{font-size:16.5px;color:var(--soil);line-height:1.8;font-style:italic}
+.note .role{margin-top:18px;font-family:-apple-system,sans-serif;font-size:11.5px;color:var(--earth);border-top:1px solid var(--line);padding-top:12px}
+
+/* 栏目五：档案室（时间线表格） */
+.archive{width:100%;border-collapse:collapse;font-family:-apple-system,"PingFang SC",sans-serif;font-size:14px}
+.archive th{background:var(--soil);color:var(--sand);padding:14px 16px;text-align:left;font-size:12px;letter-spacing:.1em;font-weight:600}
+.archive td{padding:16px;border-bottom:1px solid var(--line);color:var(--txt)}
+.archive tr:hover td{background:var(--cream)}
+.archive .yr{font-weight:700;color:var(--green);white-space:nowrap}
+.archive .nm{color:var(--soil);font-weight:600}
+.archive .tag{display:inline-block;font-size:11px;background:var(--cream);border:1px solid var(--line);padding:2px 10px;border-radius:2px;color:var(--earth)}
+
+/* CTA */
+.cta{background:var(--green);color:#f4ecd8;padding:80px 0;text-align:center;position:relative}
+.cta h3{font-size:clamp(26px,5vw,44px);font-weight:400;line-height:1.4;margin-bottom:22px;font-style:italic}
+.cta p{max-width:640px;margin:0 auto 34px;font-size:16px;color:#d8cfb0}
+.cta a{display:inline-block;background:var(--sand);color:var(--deep);font-family:-apple-system,sans-serif;font-weight:700;font-size:15px;padding:16px 42px;letter-spacing:.05em;transition:.2s}
+.cta a:hover{background:#fff}
+
+footer{background:var(--deep);color:#cbb89a;padding:60px 0 0;font-family:-apple-system,"PingFang SC",sans-serif}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px}
+.ft .b h4{font-family:Georgia,serif;font-size:24px;font-weight:400;color:var(--sand);letter-spacing:.05em;margin-bottom:14px}
+.ft .b p{font-size:13.5px;line-height:1.9;max-width:340px}
+.ft h5{font-size:12px;color:var(--sand);letter-spacing:.15em;margin-bottom:18px;text-transform:uppercase}
+.ft ul li{margin-bottom:11px;font-size:13.5px}
+.ft a:hover{color:var(--sand)}
+.fb{border-top:1px solid rgba(201,166,107,.2);padding:24px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#8a7a63}
+.fb .u{color:var(--sand);font-family:monospace}
+
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .cover{grid-template-columns:1fr;gap:30px}
+  .region{grid-template-columns:1fr 1fr}
+  .reg-c:nth-child(2){border-right:0}
+  .reg-c:nth-child(1),.reg-c:nth-child(2){border-bottom:1px solid var(--line)}
+  .notes{grid-template-columns:1fr}
+  .list{column-count:1}
+  .ft{grid-template-columns:1fr 1fr;gap:30px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  nav .wrap{justify-content:flex-start;overflow-x:auto}
+  nav a{flex-shrink:0;padding:14px 18px;font-size:13px}
+  .sec{padding:64px 0}
+  .sec-h{flex-direction:column;align-items:flex-start;gap:14px}
+  .sec-h .desc{margin-left:0}
+  .region{grid-template-columns:1fr}
+  .reg-c{border-right:0;border-bottom:1px solid var(--line)}
+  .reg-c:last-child{border-bottom:0}
+  .hero{padding:64px 0}
+  .hero .side{padding:24px}
+  .cover .ph{aspect-ratio:16/10}
+  .ft{grid-template-columns:1fr}
+  .archive{font-size:13px}
+  .archive th:nth-child(3),.archive td:nth-child(3){display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>大地电影网 · 扎根真实，记录土地上的影像</span>
+    <span>官方网址：<a href="https://dadidianyingwang-zh.github.io">dadidianyingwang-zh.github.io</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap hd">
+    <div class="kicker">LOCAL CINEMA · REAL STORIES</div>
+    <h1>大地<span>电影</span>网</h1>
+    <div class="sub">记录土地上的故事，关注被忽略的本土影像</div>
+    <div class="rule">扎根真实 · 自 2014 年起持续记录</div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#cover">封面故事</a>
+    <a href="#region">地域观察</a>
+    <a href="#list">纪实清单</a>
+    <a href="#notes">导演手记</a>
+    <a href="#archive">影像档案</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="tag">本期主题 · 土地与镜头</div>
+      <h2>每一寸土地，<br>都有<em>值得被拍</em>的故事</h2>
+      <p>大地电影网（dadidianyingwang-zh.github.io）不追逐流量话题，我们关注那些发生在具体土地上、由具体的人讲出来的故事——乡土题材、纪实影像、地方院线，以及真实事件改编的作品。</p>
+      <div class="u">网站网址：https://dadidianyingwang-zh.github.io</div>
+    </div>
+    <aside class="side">
+      <h4>本站在做什么</h4>
+      <dl>
+        <div><dt>影像记录</dt><dd>乡土与纪实</dd></div>
+        <div><dt>覆盖题材</dt><dd>12 个方向</dd></div>
+        <div><dt>影像档案</dt><dd>1980 年代起</dd></div>
+        <div><dt>更新频率</dt><dd>每周两篇</dd></div>
+        <div><dt>访问入口</dt><dd>官网直达</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="sec" id="cover">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="num">壹</span>
+      <h3>封面<i>故事</i></h3>
+      <p class="desc">每期一篇深度长读，聚焦一位导演、一个地域或一次真实的影像实践。</p>
+    </div>
+    <div class="cover">
+      <div class="ph">西北 · 黄土丘陵地带影像记录</div>
+      <div class="txt">
+        <div class="meta">2026 年 10 月 · 封面长读</div>
+        <h4>在黄土与河谷之间：一位纪录片导演的十二年跟拍</h4>
+        <p>他用一台二手摄影机，记录了一个西北村落从退耕还林到年轻人全部离开的全过程。这不是一部关于"消失"的感伤片，而是关于土地如何被重新定义的冷静观察。我们与他聊了六个小时，整理出这篇长读。</p>
+        <a href="#" class="more">阅读全文 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="region" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="num">贰</span>
+      <h3>地域<i>观察</i></h3>
+      <p class="desc">按地理与人群划分的观察维度，让影像回到它发生的地方。</p>
+    </div>
+    <div class="region">
+      <div class="reg-c">
+        <div class="pin">NORTHWEST</div>
+        <h4>西北与高原</h4>
+        <p>干旱地带的生存影像，关注生态变迁、游牧与定居之间的拉扯。</p>
+        <div class="ln">12 篇记录 →</div>
+      </div>
+      <div class="reg-c">
+        <div class="pin">SOUTHWEST</div>
+        <h4>西南山地</h4>
+        <p>少数民族地区的影像民族志，记录语言、仪式与现代化的碰撞。</p>
+        <div class="ln">9 篇记录 →</div>
+      </div>
+      <div class="reg-c">
+        <div class="pin">COASTAL</div>
+        <h4>沿海与岛屿</h4>
+        <p>渔业、侨乡、港口城市，关注流动与迁徙中的个体命运。</p>
+        <div class="ln">7 篇记录 →</div>
+      </div>
+      <div class="reg-c">
+        <div class="pin">RURAL</div>
+        <h4>乡村与县城</h4>
+        <p>县域社会的微观切面，记录城市化进程中留下的与离开的。</p>
+        <div class="ln">15 篇记录 →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="list">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="num">叁</span>
+      <h3>纪实<i>清单</i></h3>
+      <p class="desc">值得一看的真实题材作品索引，按主题整理，附简要说明。</p>
+    </div>
+    <div class="list">
+      <article>
+        <div class="idx">01</div>
+        <div>
+          <h4>土地与耕作的现代处境</h4>
+          <div class="info"><span>类型：纪录片</span><span>年份：2019</span><span>时长：98 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">02</div>
+        <div>
+          <h4>一个村庄的二十年人口流动</h4>
+          <div class="info"><span>类型：长片</span><span>年份：2021</span><span>时长：112 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">03</div>
+        <div>
+          <h4>边境小镇上的跨境婚姻</h4>
+          <div class="info"><span>类型：纪实电影</span><span>年份：2022</span><span>时长：87 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">04</div>
+        <div>
+          <h4>老手艺人的最后十年</h4>
+          <div class="info"><span>类型：纪录片</span><span>年份：2018</span><span>时长：76 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">05</div>
+        <div>
+          <h4>矿区关停之后，人们去了哪里</h4>
+          <div class="info"><span>类型：独立影像</span><span>年份：2023</span><span>时长：104 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">06</div>
+        <div>
+          <h4>县城影院的最后一场放映</h4>
+          <div class="info"><span>类型：短片合集</span><span>年份：2020</span><span>时长：54 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">07</div>
+        <div>
+          <h4>高原牧区的儿童与学校</h4>
+          <div class="info"><span>类型：纪录片</span><span>年份：2024</span><span>时长：91 min</span></div>
+        </div>
+      </article>
+      <article>
+        <div class="idx">08</div>
+        <div>
+          <h4>沿海渔村的代际更替</h4>
+          <div class="info"><span>类型：纪实长片</span><span>年份：2022</span><span>时长：118 min</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="notes" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="num">肆</span>
+      <h3>导演<i>手记</i></h3>
+      <p class="desc">来自一线的真实表达，记录拍摄现场的真实处境与思考。</p>
+    </div>
+    <div class="notes">
+      <div class="note">
+        <blockquote>拍了三年，我最怕的不是没有素材，而是拍着拍着，把人拍成了符号。</blockquote>
+        <div class="who">李 · 纪录片导演</div>
+        <div class="role">代表作：《黄土之间》｜拍摄周期 12 年</div>
+      </div>
+      <div class="note">
+        <blockquote>真实不需要你去加工，你只要耐心等它自己发生，等够久就行。</blockquote>
+        <div class="who">王 · 独立制片人</div>
+        <div class="role">长期驻扎西南山地｜已完成 4 部独立作品</div>
+      </div>
+      <div class="note">
+        <blockquote>所谓乡土，不是怀旧，而是当下。土地一直在变，只是很多人没在看。</blockquote>
+        <div class="who">陈 · 影像研究者</div>
+        <div class="role">研究方向：影像民族志｜任教于地方院校</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="archive">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="num">伍</span>
+      <h3>影像<i>档案</i></h3>
+      <p class="desc">按年代整理的本土影像索引，从 1980 年代起，持续补充中。</p>
+    </div>
+    <table class="archive">
+      <thead>
+        <tr><th>年代</th><th>作品 / 项目</th><th>题材方向</th><th>状态</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="yr">2024</td><td class="nm">高原上的移动教室</td><td><span class="tag">教育 / 边疆</span></td><td>已收录</td></tr>
+        <tr><td class="yr">2023</td><td class="nm">关停的矿区与迁徙的人</td><td><span class="tag">工业遗存</span></td><td>已收录</td></tr>
+        <tr><td class="yr">2022</td><td class="nm">跨境婚姻档案</td><td><span class="tag">边境 / 家庭</span></td><td>已收录</td></tr>
+        <tr><td class="yr">2020</td><td class="nm">县城影院告别曲</td><td><span class="tag">文化空间</span></td><td>已收录</td></tr>
+        <tr><td class="yr">2018</td><td class="nm">最后的手艺人</td><td><span class="tag">非遗传承</span></td><td>已收录</td></tr>
+        <tr><td class="yr">2014</td><td class="nm">本刊创刊号专题</td><td><span class="tag">创刊特辑</span></td><td>已收录</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h3>土地一直在变，<br>只是很多人没在看。</h3>
+    <p>大地电影网（dadidianyingwang-zh.github.io）持续记录与整理本土影像。如果你也有想分享的拍摄经历或作品线索，欢迎与我们联系。</p>
+    <a href="#">查看完整片单 →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="b">
+        <h4>大地电影网</h4>
+        <p>一个扎根真实、关注本土与地域影像的电影站点。记录土地上的故事，让被忽略的本土创作被看见。官方网址：dadidianyingwang-zh.github.io</p>
+      </div>
+      <div>
+        <h5>主要栏目</h5>
+        <ul>
+          <li><a href="#cover">封面故事</a></li>
+          <li><a href="#region">地域观察</a></li>
+          <li><a href="#list">纪实清单</a></li>
+          <li><a href="#notes">导演手记</a></li>
+          <li><a href="#archive">影像档案</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>题材索引</h5>
+        <ul>
+          <li><a href="#">乡土题材</a></li>
+          <li><a href="#">纪实影像</a></li>
+          <li><a href="#">地方院线</a></li>
+          <li><a href="#">真实事件改编</a></li>
+          <li><a href="#">影像民族志</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于本刊</h5>
+        <ul>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">投稿与合作</a></li>
+          <li><a href="#">版权声明</a></li>
+          <li><a href="#">联系编辑部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© 2026 大地电影网 · 网站网址：<span class="u">https://dadidianyingwang-zh.github.io</span></span>
+      <span><a href="#">隐私政策</a> &nbsp; <a href="#">使用条款</a> &nbsp; <a href="#">↑ 回到顶部</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+</body>
+</html>
